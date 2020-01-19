@@ -7,7 +7,7 @@ export default function RulesModal({ handleClose, show }) {
 
   return (
     <div className={showHideClassName}>
-      <section className="modal-main">
+      <div className="modal-main">
         <div className="modal-header">
           <h1>Rules</h1>
           <button className="close-button" onClick={handleClose}>
@@ -17,7 +17,7 @@ export default function RulesModal({ handleClose, show }) {
         <div className="modal-body">
           <img src={rules} alt="rules" />
         </div>
-      </section>
+      </div>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import LinkToSceneTwo from "../components/LinkToSceneTwo";
+import Choice from "../components/Choice";
 import RulesButton from "../components/RulesButton";
 import RulesModal from "../components/RulesModal";
 import AppContext from "../state/AppContext";
@@ -15,19 +15,19 @@ export default function SceneOne() {
           <Fragment>
             <div className="scene-one">
               <div className="scene-one-top">
-                <LinkToSceneTwo
+                <Choice
                   choice="paper"
                   setPicked={setPicked}
                   setHousePicked={setHousePicked}
                 />
-                <LinkToSceneTwo
+                <Choice
                   choice="scissors"
                   setPicked={setPicked}
                   setHousePicked={setHousePicked}
                 />
               </div>
               <div className="scene-one-bottom">
-                <LinkToSceneTwo
+                <Choice
                   choice="rock"
                   setPicked={setPicked}
                   setHousePicked={setHousePicked}
