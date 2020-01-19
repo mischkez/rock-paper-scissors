@@ -1,0 +1,250 @@
+html {
+  height: 100%;
+}
+
+.app {
+  text-align: center;
+  background: radial-gradient(
+      circle at top,
+      hsl(214, 47%, 23%) 0%,
+      hsl(237, 49%, 15%) 100%
+    )
+    no-repeat center;
+  background-size: cover;
+  color: white;
+  font-size: calc(10px + 2vmin);
+  font-weight: 600;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 20px;
+  width: 60%;
+  border: 3px solid hsl(217, 16%, 45%);
+  border-radius: 20px;
+  padding: 20px 20px 14px 14px;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px 40px;
+}
+
+.score-title {
+  text-transform: uppercase;
+  font-size: 11px;
+  color: hsl(229, 64%, 46%);
+}
+
+.score-count {
+  font-size: 3rem;
+  color: hsl(229, 25%, 31%);
+}
+
+.scene-one {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: url("../images/bg-triangle.svg") no-repeat center;
+}
+
+.scene-one-top {
+  display: flex;
+}
+
+.scene-one-top a {
+  margin: 50px;
+}
+
+.scene-one-bottom {
+  display: flex;
+}
+
+.scene-one-bottom a {
+  margin: 50px;
+}
+
+.rounded {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  background: white no-repeat center;
+}
+
+.rounded-bigger {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  background: white no-repeat center;
+  background-size: 100px;
+}
+
+.scene-two {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 600px;
+}
+
+.scene-two div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.scene-two p {
+  text-transform: uppercase;
+}
+
+.result-msg {
+  margin: 100px 0 10px 0;
+  text-transform: uppercase;
+}
+
+.play-again-link {
+  background-color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 11px;
+  padding: 10px 60px;
+  color: hsl(349, 81%, 31%);
+  text-transform: uppercase;
+}
+
+.paper {
+  border: 20px solid hsl(230, 89%, 65%);
+  background-image: url("../images/icon-paper.svg");
+}
+
+.scissors {
+  border: 20px solid hsl(40, 84%, 53%);
+  background-image: url("../images/icon-scissors.svg");
+}
+
+.rock {
+  border: 20px solid hsl(349, 70%, 56%);
+  background-image: url("../images/icon-rock.svg");
+}
+
+.rules {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  text-transform: uppercase;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px 30px;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-main {
+  border-radius: 10px;
+  position: fixed;
+  background: white;
+  color: hsl(229, 25%, 31%);
+  width: 400px;
+  height: auto;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.modal-body {
+  margin-bottom: 50px;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.close-button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+.bg-dark {
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 160px;
+  height: 160px;
+  margin: 60px auto;
+}
+
+@media all and (max-width: 580px) {
+  .scoreboard {
+    width: 80%;
+    height: 60px;
+    padding: 18px;
+  }
+
+  .scoreboard .app-logo {
+    height: 60px;
+  }
+
+  .score {
+    padding: 5px 20px !important;
+  }
+
+  .score-count {
+    font-size: 2rem !important;
+  }
+
+  .rules {
+    position: inherit;
+    margin: 0 auto;
+  }
+
+  .rounded,
+  .rounded-bigger {
+    height: 80px;
+    width: 80px;
+    background-size: 60%;
+  }
+
+  .scene-two {
+    width: 90%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .scene-one {
+    width: 80%;
+  }
+}
