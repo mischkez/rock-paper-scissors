@@ -14,6 +14,7 @@ export default function Choice(props) {
         setHousePicked(randomChoice);
       }}
     >
+      <span class="sr-only">This link has no text</span>
       <div className={"rounded " + choice}></div>
     </Link>
   );
