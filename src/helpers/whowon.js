@@ -1,35 +1,17 @@
 export default (pick, housePick) => {
-  const WIN = ["You won", 1];
   const DEFEAT = ["You lose", 0];
   const DRAW = ["It's a draw", 0];
+  const WIN = ["You won", 1];
+
+  if (housePick === pick) return DRAW;
 
   switch (pick) {
     case "rock":
-      if (housePick === "paper") {
-        return DEFEAT;
-      }
-      if (housePick === "scissors") {
-        return WIN;
-      }
-      return DRAW;
-
+      return housePick === "paper" ? DEFEAT : WIN;
     case "paper":
-      if (housePick === "rock") {
-        return WIN;
-      }
-      if (housePick === "scissors") {
-        return DEFEAT;
-      }
-      return DRAW;
-
+      return housePick === "scissors" ? DEFEAT : WIN;
     case "scissors":
-      if (housePick === "rock") {
-        return DEFEAT;
-      }
-      if (housePick === "paper") {
-        return WIN;
-      }
-      return DRAW;
+      return housePick === "rock" ? DEFEAT : WIN;
 
     default:
       return DRAW;
