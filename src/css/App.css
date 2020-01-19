@@ -24,8 +24,7 @@ html {
 .scoreboard {
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  top: 20px;
+  margin-top: 20px;
   width: 50%;
   border: 3px solid hsl(217, 16%, 45%);
   border-radius: 20px;
